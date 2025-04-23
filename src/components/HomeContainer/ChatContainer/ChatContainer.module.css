@@ -1,0 +1,55 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--whatsapp-chat-bg); /* WhatsApp Chat Background */
+  border-left: 1px solid var(--whatsapp-border);
+}
+
+/* Make sure the MessageList can scroll properly */
+.messageList {
+  flex-grow: 1; /* Take available vertical space */
+  padding: 10px;
+  overflow-y: auto; /* Allow scrolling if messages overflow */
+  background-color: var(
+    --whatsapp-chat-background
+  ); /* Matches WhatsApp's Chat Background */
+}
+
+/* Adjust MessageInput to sit at the bottom */
+.messageInput {
+  border-top: 1px solid var(--whatsapp-border);
+  background-color: var(--whatsapp-chat-background);
+}
+
+/* Style for No More Messages Notice */
+.noMoreMessages {
+  text-align: center;
+  padding: 10px;
+  color: var(--whatsapp-dark-gray); /* Muted text color */
+  font-size: 0.9rem;
+}
+
+/* Overlay container for GroupInfo */
+.groupInfoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it is above other content */
+  padding: 20px;
+}
+
+.groupInfoContainer {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 600px; /* Adjust as needed */
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

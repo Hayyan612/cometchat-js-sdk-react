@@ -1,0 +1,38 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures proper alignment */
+  gap: 18px; /* Adds more space between buttons */
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.callButton,
+.addMemberButton {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%; /* Makes them circular */
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Maintain uniform size */
+  height: 40px; /* Maintain uniform size */
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle elevation */
+}
+
+.callButton:hover,
+.addMemberButton:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.callButton img,
+.addMemberButton img {
+  width: 22px; /* Increase icon size */
+  height: 22px;
+}

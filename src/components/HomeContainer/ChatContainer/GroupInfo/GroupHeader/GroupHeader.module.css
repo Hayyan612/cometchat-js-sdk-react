@@ -1,0 +1,31 @@
+.groupHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+  align-items: center;
+  gap: 5px; /* Reduced gap slightly for better spacing */
+  padding: 5px 10px; /* Adjusted padding for better alignment */
+  border-bottom: 1px solid #d1d1d1; /* Slightly darker border for contrast */
+  background-color: #ffffff; /* Changed to white for a cleaner look */
+}
+
+.groupIcon {
+  width: 100px; /* Slightly reduced size for better balance */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #25d366;
+  padding: 2px; /* Added padding inside the border */
+  background-color: #fff; /* Ensures border visibility */
+}
+
+.groupName {
+  font-size: 13px; /* Adjusted for better balance */
+  font-weight: 600; /* Slightly reduced boldness */
+  color: #222; /* Darker shade for better contrast */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px; /* Prevents name overflow */
+}

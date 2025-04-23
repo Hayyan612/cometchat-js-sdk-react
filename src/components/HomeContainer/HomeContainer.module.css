@@ -1,0 +1,98 @@
+.homeContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--whatsapp-background);
+}
+
+.conversationsContainer {
+  width: 30%;
+  background-color: var(--whatsapp-green-dark); /* WhatsApp Dark Green */
+  border-right: 1px solid var(--whatsapp-border);
+  padding: 0; /* Remove padding to match WhatsApp style */
+  overflow-y: auto;
+}
+
+.chatContainer {
+  width: calc(100% - 30%); /* Default width */
+  background-color: var(--whatsapp-chat-bg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.threadContainer {
+  width: 30%;
+  background-color: var(--whatsapp-chat-bg);
+  border-left: 1px solid var(--whatsapp-border);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.noChatSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--whatsapp-dark-gray); /* Muted Text Color */
+  font-size: 1.2rem;
+}
+.callToggleButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001; /* Ensures it appears above modal */
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.callToggleButton:hover {
+  background-color: #1da851; /* Darker green on hover */
+}
+
+.callContainer {
+  position: fixed; /* Make it full screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.callControls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.endCallBtn {
+  padding: 12px 24px;
+  background-color: #ff3b30; /* Red for rejecting */
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.endCallBtn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}

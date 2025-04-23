@@ -1,0 +1,122 @@
+/* Call modal overlay */
+.callModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for focus */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Call modal container */
+.callModal {
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e; /* Dark background like WhatsApp calls */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Call initiator avatar */
+.callInitiatorAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Call container for video/audio */
+.callContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Call controls (buttons at bottom) */
+.callControls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Call action buttons */
+.acceptCallBtn,
+.rejectCallBtn,
+.endCallBtn {
+  margin: 5px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.acceptCallBtn {
+  background-color: #25d366; /* WhatsApp green */
+}
+
+.acceptCallBtn:hover {
+  background-color: #1da851;
+}
+
+.rejectCallBtn,
+.endCallBtn {
+  background-color: #ff3b30; /* Red */
+}
+
+.rejectCallBtn:hover,
+.endCallBtn:hover {
+  background-color: #cc2e26;
+}
+
+/* Floating Call Toggle Button */
+.callToggleBtn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #25d366; /* WhatsApp green */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease-in-out;
+}
+
+.callToggleBtn:hover {
+  background: #1ebe5d;
+}
+.callerAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.callActions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

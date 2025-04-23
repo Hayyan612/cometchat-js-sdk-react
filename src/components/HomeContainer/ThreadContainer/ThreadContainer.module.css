@@ -1,0 +1,138 @@
+.threadContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--whatsapp-chat-bg);
+  border-left: 1px solid var(--whatsapp-border);
+}
+
+.threadHeader {
+  background-color: var(--whatsapp-green-dark);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--whatsapp-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.threadHeader button {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.threadMessages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: var(--whatsapp-chat-bg);
+}
+
+.messageBubble {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+/* Sent Messages (User's Own) */
+.messageBubble.sent {
+  background-color: #dcf8c6; /* Light Green (WhatsApp) */
+  color: black;
+  align-self: flex-end;
+  text-align: left;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+/* Received Messages */
+.messageBubble.received {
+  background-color: #ffffff; /* White */
+  color: black;
+  align-self: flex-start;
+  text-align: left;
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.messageInputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--whatsapp-chat-bg);
+  border-top: 1px solid var(--whatsapp-border);
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.messageInput {
+  flex-grow: 1;
+  padding: 8px 14px;
+  border: 1px solid var(--whatsapp-border);
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  transition: border 0.2s;
+}
+
+.messageInput:focus {
+  border-color: var(--whatsapp-send-button-bg);
+}
+
+.sendButton {
+  background-color: var(--whatsapp-green-dark);
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sendButton:hover {
+  background-color: #075e54;
+}
+
+.messageHeader {
+  font-weight: bold;
+  color: #128c7e; /* WhatsApp Green */
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.senderName {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Deleted Message Styling */
+.deletedMessage {
+  color: var(--whatsapp-dark-gray);
+  font-style: italic;
+}
+
+/* Timestamp and Status Container */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Timestamp Styling */
+.dateTime {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}

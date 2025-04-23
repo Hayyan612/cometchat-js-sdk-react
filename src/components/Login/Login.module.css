@@ -1,0 +1,49 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--whatsapp-background); /* WhatsApp Background */
+}
+
+.loginBox {
+  color: var(--whatsapp-green-dark);
+  padding: 30px;
+  border-radius: 12px;
+  background: white; /* Login box background */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid var(--whatsapp-green);
+  border-radius: 6px;
+  outline: none;
+  background-color: white;
+  color: var(--whatsapp-green-dark);
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--whatsapp-green-dark);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--whatsapp-green); /* WhatsApp Green */
+  color: var(--text-light);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--whatsapp-green-dark); /* WhatsApp Dark Green */
+  transform: scale(1.03);
+}

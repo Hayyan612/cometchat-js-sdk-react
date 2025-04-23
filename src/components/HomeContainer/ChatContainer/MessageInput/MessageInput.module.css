@@ -1,0 +1,86 @@
+.messageInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-top: 1px solid var(--whatsapp-dark-grey);
+  background-color: var(--whatsapp-light-grey);
+}
+
+.textInput {
+  flex-grow: 1;
+  position: relative;
+}
+
+.textInput textarea {
+  width: 95%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  font-size: 16px;
+  color: var(--whatsapp-green-dark);
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  resize: none;
+  min-height: 40px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.textInput textarea:focus {
+  background-color: #f1f1f1;
+}
+
+.textInput textarea::placeholder {
+  color: #878787;
+  font-size: 14px;
+}
+
+.fileInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--whatsapp-green);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.fileInput:hover {
+  background-color: var(--whatsapp-green-dark);
+  transform: scale(1.05);
+}
+
+.fileInput img {
+  width: 20px;
+  height: 20px;
+}
+
+.fileInput input[type="file"] {
+  display: none;
+}
+
+.sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: var(--whatsapp-green);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.sendButton:hover {
+  background-color: var(--whatsapp-green-dark);
+  transform: scale(1.05);
+}

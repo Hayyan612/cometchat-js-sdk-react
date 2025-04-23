@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--whatsapp-background); /* WhatsApp Background */
+  padding: 5px; /* Slight padding for better spacing */
+  scrollbar-width: thin;
+  scrollbar-color: var(--whatsapp-teal) var(--whatsapp-green-dark);
+}
+
+/* Scrollbar styling for WebKit browsers */
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--whatsapp-teal); /* Matches WhatsApp color */
+  border-radius: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: var(--whatsapp-green-dark);
+}

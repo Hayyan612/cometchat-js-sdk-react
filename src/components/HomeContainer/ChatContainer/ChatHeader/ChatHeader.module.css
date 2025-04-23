@@ -1,0 +1,138 @@
+.chatHeader {
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px; /* Adjusted padding for better spacing */
+  background-color: var(--whatsapp-green-dark);
+  border-bottom: 1px solid var(--whatsapp-border);
+}
+
+.backButtonImg {
+  width: 22px; /* Slightly larger for better tap target */
+  height: 22px;
+  margin-right: 8px;
+}
+
+.backButton {
+  margin-right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: var(--whatsapp-light-green);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: var(--whatsapp-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--whatsapp-green-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Status Indicator Dot */
+.avatar::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--whatsapp-green-dark); /* Border to blend with background */
+  border-radius: 50%;
+  background-color: var(--whatsapp-light-gray); /* Default offline color */
+}
+
+/* Online Status */
+.avatar.online::after {
+  background-color: var(--whatsapp-light-green);
+  box-shadow: 0 0 5px var(--whatsapp-light-green); /* Glow effect */
+}
+
+/* Offline Status */
+.avatar.offline::after {
+  background-color: var(--whatsapp-light-gray);
+}
+
+/* Chat Info */
+.chatInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatInfo .name {
+  font-weight: bold;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.chatInfo .status {
+  font-size: 0.8rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-style: italic;
+}
+
+/* Dot inside status text */
+/* .status::before {
+  content: "•";
+  font-size: 1rem;
+  color: var(--whatsapp-light-green);
+  display: inline-block;
+} */
+
+/* Offline Status */
+/* .chatInfo .status.offline {
+  color: var(--whatsapp-light-gray);
+}
+
+.chatInfo .status.offline::before {
+  color: var(--whatsapp-light-gray);
+} */
+
+.callButtons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.callButton,
+.videoCallButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.callButton:hover,
+.videoCallButton:hover {
+  color: var(--whatsapp-light-green);
+}
+.callIcon {
+  width: 24px;
+  height: 24px;
+}

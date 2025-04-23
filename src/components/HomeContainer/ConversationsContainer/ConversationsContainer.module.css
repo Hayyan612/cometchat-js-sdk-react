@@ -1,0 +1,31 @@
+.conversationsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  background-color: var(--whatsapp-background); /* WhatsApp Dark Green */
+  border-right: 1px solid var(--whatsapp-border); /* Matches WhatsApp style */
+  overflow-y: auto;
+}
+
+.list {
+  flex-grow: 1;
+  padding: 5px; /* Reduced padding to better match WhatsApp */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--whatsapp-teal) var(--whatsapp-green-dark); /* Styling scrollbar */
+}
+
+/* Scrollbar styling for WebKit browsers */
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--whatsapp-teal);
+  border-radius: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: var(--whatsapp-green-dark);
+}

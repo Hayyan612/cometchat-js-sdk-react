@@ -1,0 +1,528 @@
+/* Message Container */
+.messageItem {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Sent Messages (User's Own) */
+.ownMessage {
+  background-color: #dcf8c6; /* Light Green (WhatsApp) */
+  color: black;
+  align-self: flex-end;
+  text-align: left;
+  border-bottom-right-radius: 0;
+}
+
+/* Received Messages */
+.otherMessage {
+  background-color: #ffffff; /* White */
+  color: black;
+  align-self: flex-start;
+  text-align: left;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.deletedMessage {
+  color: var(--whatsapp-dark-gray);
+}
+/* Timestamp and Status Container */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Timestamp Styling */
+.dateTime {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Message Status Styling */
+.messageStatus {
+  margin-left: 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+
+/* Styling for Ticks */
+.messageStatus .singleTick {
+  color: #999; /* Grey */
+}
+
+.messageStatus .doubleTick {
+  color: #999; /* Grey */
+}
+
+.messageStatus .doubleTickRead {
+  color: #4fc3f7; /* WhatsApp Blue */
+}
+
+/* Text Message Styling */
+.textMessage {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Media Container */
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+/* Image Styling */
+.mediaImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mediaImage:hover {
+  transform: scale(1.05);
+}
+
+/* Full-screen Image Preview */
+.imagePreviewOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.imagePreview {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  object-fit: contain;
+}
+
+/* Video Styling */
+.mediaVideo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Audio Styling */
+.mediaAudio {
+  width: 200px;
+}
+
+/* File Link Styling */
+.fileLink {
+  color: #128c7e; /* WhatsApp Green */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.fileLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .messageItem {
+    max-width: 90%;
+  }
+
+  .mediaContainer {
+    max-width: 100%;
+  }
+}
+
+/* Kebab Menu Button */
+.kebabMenuButton {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  z-index: 1;
+}
+
+/* Kebab Menu Popup */
+.kebabMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Increased z-index to ensure visibility */
+  min-width: 120px;
+  margin-top: 6px;
+}
+
+/* Kebab Menu Items */
+.menuItem {
+  z-index: 10000; /* Ensure menu items are above other content */
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hover Effect for Menu Items */
+.menuItem:hover {
+  background-color: #f0f0f0;
+}
+
+/* Edit Message Container */
+.editMessageContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 8px;
+}
+
+/* Edit Message Input */
+.editMessageInput {
+  flex-grow: 1;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Save and Cancel Buttons */
+.saveButton,
+.cancelButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.saveButton {
+  background-color: #128c7e; /* WhatsApp Green */
+  color: white;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Reaction Container */
+.reactionContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+/* Individual Reaction Display */
+.reactionDisplay {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.reactionDisplay:hover {
+  background-color: #e0e0e0;
+}
+
+/* Reaction Emoji */
+.reactionDisplay span {
+  font-size: 16px;
+}
+
+/* Reaction Count */
+.reactionCount {
+  font-size: 12px;
+  color: #666;
+}
+
+.reactionMenu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* ✅ Enable horizontal scroll */
+  overflow-y: hidden;
+  white-space: nowrap;
+  max-width: 220px;
+  gap: 10px;
+  z-index: 10;
+  scrollbar-width: none; /* Firefox */
+}
+
+.ownMessage .reactionMenu {
+  left: auto;
+  right: 16px; /* move more to the left */
+}
+
+/* ✅ Hide scrollbar in Webkit browsers */
+.reactionMenu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Emoji Button */
+.reactionEmoji {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.reactionEmoji:hover {
+  transform: scale(1.2);
+}
+
+/* Individual Reaction */
+.reaction {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px; /* ✅ Ensure reactions have a uniform size */
+  min-height: 32px;
+}
+
+.reaction:hover {
+  background-color: #f0f0f0;
+}
+
+.replyCount {
+  margin-top: 4px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1a73e8; /* Blue color to indicate it's clickable */
+}
+.groupMessageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.senderAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.senderName {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Action Message Style */
+.actionMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.actionMessageBubble {
+  background-color: #e1f3fb; /* Light blue, similar to WhatsApp */
+  color: #555;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 4px 10px;
+  max-width: fit-content;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Call Message Styling */
+.callMessage {
+  display: flex;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  position: relative;
+  background-color: #e1f3fb; /* Light blue for group or neutral call */
+  color: #555;
+  font-weight: 500;
+  align-self: center;
+}
+
+/* Sent Call */
+.ownCallMessage {
+  background-color: #dcf8c6;
+  color: black;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Received Call */
+.otherCallMessage {
+  background-color: #ffffff;
+  color: black;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Call Message Content */
+.callMessageContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Call Icon */
+.callMessageContent .callIcon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-top: 3px;
+}
+
+/* Call Details (Multi-line Text) */
+.callDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2px;
+}
+
+/* Call Type (e.g., Audio Call) */
+.callType {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* Call Status (e.g., Call Ended) */
+.callStatus {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+/* Direct Call */
+
+.callMessageBubble {
+  display: flex;
+  align-items: center;
+  background-color: #dcf8c6;
+  border-radius: 15px;
+  padding: 5px 8px;
+  max-width: 270px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  gap: 10px;
+  border: none;
+  outline: none;
+  margin: 2px 0px;
+}
+
+.callMessageBubble:hover {
+  background-color: #c9e6b5;
+}
+
+.callIcon {
+  background-color: #00a884; /* Updated WhatsApp green */
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.callIcon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.callLabel {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #262626;
+  white-space: nowrap;
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu,
+    Cantarell, Fira Sans, sans-serif;
+}
+.messageTime {
+  font-size: 12px;
+  color: #999;
+  margin-left: auto;
+  margin-top: 2px;
+}
+
+/* For received messages */
+.otherMessage .callMessageBubble {
+  background-color: #ffffff;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+.otherMessage .callMessageBubble:hover {
+  background-color: var(--whatsapp-light-gray);
+}
